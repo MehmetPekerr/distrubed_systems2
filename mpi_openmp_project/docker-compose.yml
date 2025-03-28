@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  mpi-master:
+    build: .
+    container_name: mpi-master
+    networks:
+      mpi-net:
+        aliases:
+          - mpi-master
+    ports:
+      - "22:22"
+    command: ["/bin/bash", "-c", "ssh-keygen -A && echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config && service ssh start && tail -f /dev/null"]
+    restart: always
+
+  mpi-worker-1:
+    build: .
+    container_name: mpi-worker-1
+    networks:
+      mpi-net:
+        aliases:
+          - mpi-worker-1
+    depends_on:
+      - mpi-master
+    command: ["/bin/bash", "-c", "ssh-keygen -A && echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config && service ssh start && tail -f /dev/null"]
+    restart: always
+
+  mpi-worker-2:
+    build: .
+    container_name: mpi-worker-2
+    networks:
+      mpi-net:
+        aliases:
+          - mpi-worker-2
+    depends_on:
+      - mpi-master
+    command: ["/bin/bash", "-c", "ssh-keygen -A && echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config && service ssh start && tail -f /dev/null"]
+    restart: always
+
+networks:
+  mpi-net:
+    driver: bridge
