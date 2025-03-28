@@ -1,5 +1,5 @@
 # distrubed_systems2
-
+Bu proje, Docker kullanarak birden fazla düğüm içeren dağıtık bir sistem kurmayı ve MPI ile OpenMP paralel hesaplama yöntemlerini kullanarak veri kümesini işlemeyi amaçlamaktadır.
 ## MPI vs OpenMP Performans Karşılaştırması
 
 Bu bölümde, MPI ve OpenMP'nin performans farkları karşılaştırılmıştır. Küçük veri setlerinde OpenMP daha hızlı çalışırken, büyük veri setlerinde MPI daha etkili olabilmektedir. Her iki yöntem de farklı paralel işlem senaryoları için uygundur ve her birinin avantajları bulunmaktadır.
