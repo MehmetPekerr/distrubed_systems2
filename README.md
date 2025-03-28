@@ -19,3 +19,6 @@ Bu bölümde, MPI ve OpenMP'nin performans farkları karşılaştırılmıştır
 ### Sonuç
 - **Küçük veri setleri**: OpenMP daha hızlıdır, çünkü aynı makinedeki çekirdekler arasında hızlı veri paylaşımı yapılabilir.
 - **Büyük veri setleri**: MPI daha etkili olacaktır, çünkü veri düğümler arasında dağıtılabilir.
+
+### Video Linki
+https://drive.google.com/file/d/1RIvIyKCXo6htoIhQLOKiK5pAwVqaAmzH/view?usp=drive_link
