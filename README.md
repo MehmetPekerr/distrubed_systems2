@@ -1,8 +1,9 @@
 # distrubed_systems2
 Bu proje, Docker kullanarak birden fazla düğüm içeren dağıtık bir sistem kurar ve MPI ile OpenMP paralel hesaplama yöntemlerini kullanarak veri kümesini işler.
-Docker Compose ile birden fazla konteynerde veriler paralel olarak işlenir. 
-MPI düğümler arası iletişimi sağlar,
+Docker Compose ile birden fazla konteynerde veriler paralel olarak işlenir.
+MPI, düğümler arası iletişimi sağlarken,
 OpenMP ise her düğümde çok çekirdekli işlemeyi optimize eder ve büyük veri kümelerinin hızlı bir şekilde işlenmesini sağlar.
+Bu sayede, dağıtık bir ortamda paralel hesaplama yaparak veri işleme süreçlerini hızlandırır.
 ## MPI vs OpenMP Performans Karşılaştırması
 
 Bu bölümde, MPI ve OpenMP'nin performans farkları karşılaştırılmıştır. Küçük veri setlerinde OpenMP daha hızlı çalışırken, büyük veri setlerinde MPI daha etkili olabilmektedir. Her iki yöntem de farklı paralel işlem senaryoları için uygundur ve her birinin avantajları bulunmaktadır.
